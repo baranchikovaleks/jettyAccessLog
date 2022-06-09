@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/access.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/access.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>combined</pattern>
+        </encoder>
+    </appender>
+
+    <appender-ref ref="file"/>
+</configuration>
